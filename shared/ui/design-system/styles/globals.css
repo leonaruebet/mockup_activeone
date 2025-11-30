@@ -1,0 +1,288 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './design-system.css';
+
+body {
+  font-family: var(--font-kanit), var(--font-plus-jakarta-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    /* ActiveOne CI Color - Primary Orange */
+    --primary: 24 100% 58%; /* #ff9133 - ActiveOne brand orange */
+    --primary-foreground: 0 0% 100%; /* White text on orange */
+    --secondary: 24 100% 96%; /* Very light orange tint */
+    --secondary-foreground: 24 100% 20%; /* Dark orange text */
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 24 100% 94%; /* Light orange accent */
+    --accent-foreground: 24 100% 25%; /* Dark orange text */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 0 0% 91%; /* #e8e9e9 - whitesmoke-300 for consistent borders */
+    --input: 0 0% 91%; /* #e8e9e9 - whitesmoke-300 for consistent input borders */
+    --ring: 24 100% 58%; /* Orange focus ring */
+    --radius: 0.5rem;
+    --chart-1: 24 100% 58%; /* Primary orange for charts */
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Toast notification colors - Design System */
+    --toast-success-bg: #f3fbf7; /* electric-green-100 */
+    --toast-success-text: #4ac97e; /* electric-green-600 */
+    --toast-error-bg: #fbecec; /* red-power-100 */
+    --toast-error-text: #d0302f; /* red-power-600 */
+    --toast-warning-bg: #fff2e9; /* happy-orange-100 */
+    --toast-warning-text: #e26f20; /* happy-orange-600 */
+    --toast-info-bg: #ebedfc; /* day-blue-100 */
+    --toast-info-text: #4d62e5; /* day-blue-500 */
+    /* Fallback font families when CSS variables are not provided by the host app */
+    --font-plus-jakarta: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-plus-jakarta-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-kanit: 'Kanit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    /* ActiveOne CI Color - Orange for dark mode */
+    --primary: 24 100% 65%; /* Lighter orange for dark mode accessibility */
+    --primary-foreground: 222.2 84% 4.9%; /* Dark text on orange */
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 24 50% 15%; /* Dark orange accent for dark mode */
+    --accent-foreground: 24 100% 80%; /* Light orange text */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 0 0% 6%; /* #0d0f10 - gray-700 for consistent dark mode borders */
+    --input: 0 0% 6%; /* #0d0f10 - gray-700 for consistent dark mode input borders */
+    --ring: 24 100% 65%; /* Orange focus ring for dark mode */
+    --chart-1: 24 100% 65%; /* Primary orange for dark mode charts */
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Toast notification colors - Dark Mode */
+    --toast-success-bg: #122b1d; /* electric-green-900 */
+    --toast-success-text: #4ac97e; /* electric-green-600 */
+    --toast-error-bg: #2f0f0e; /* red-power-900 */
+    --toast-error-text: #d0302f; /* red-power-600 */
+    --toast-warning-bg: #391c08; /* happy-orange-900 */
+    --toast-warning-text: #e26f20; /* happy-orange-600 */
+    --toast-info-bg: #0c1132; /* day-blue-900 */
+    --toast-info-text: #4d62e5; /* day-blue-500 */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Thai Font Support */
+@layer base {
+  .font-thai {
+    font-family: var(--font-kanit), var(--font-plus-jakarta-sans), var(--font-inter), system-ui, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: "liga" on, "calt" on;
+    font-feature-settings: "liga" on, "calt" on;
+  }
+  
+  .font-inter {
+    font-family: var(--font-inter), system-ui, sans-serif;
+  }
+  
+  /* Ensure proper line height for Thai text */
+  [lang="th"] {
+    line-height: 1.6;
+  }
+  
+  [lang="en"] {
+    line-height: 1.5;
+  }
+}
+
+/* ActiveOne CI Orange Color Enhancements */
+@layer components {
+  /* Enhanced Focus States with Orange CI Color */
+  .focus-primary:focus-visible {
+    @apply ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+
+  /* Orange CI Button Variants */
+  .btn-primary-gradient {
+    @apply bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-primary-foreground shadow-lg shadow-primary/25 transition-all duration-200;
+  }
+
+  /* Orange CI Accent Elements */
+  .accent-orange {
+    @apply border-l-4 border-primary bg-primary/5 text-primary/90;
+  }
+
+  /* Orange CI Progress Indicators */
+  .progress-primary {
+    @apply bg-primary/20;
+  }
+  
+  .progress-primary > * {
+    @apply bg-primary;
+  }
+
+  /* Orange CI Interactive Cards */
+  .card-interactive {
+    @apply hover:shadow-lg hover:shadow-primary/10 hover:border-primary/20 transition-all duration-200 cursor-pointer;
+  }
+
+  /* Orange CI Status Indicators */
+  .status-active {
+    @apply bg-primary/10 text-primary border border-primary/20;
+  }
+
+  .status-success {
+    @apply bg-green-50 text-green-700 border border-green-200;
+  }
+
+  .status-warning {
+    @apply bg-amber-50 text-amber-700 border border-amber-200;
+  }
+
+  /* Orange CI Link Styles */
+  .link-primary {
+    @apply text-primary hover:text-primary/80 underline-offset-4 hover:underline transition-colors;
+  }
+
+  /* Orange CI Form Enhancements */
+  .input-primary:focus {
+    @apply border-primary ring-2 ring-primary/20;
+  }
+
+  /* Orange CI Typography Accents */
+  .text-accent {
+    @apply text-primary font-medium;
+  }
+
+  .heading-accent {
+    @apply border-l-4 border-primary pl-4 text-primary/90;
+  }
+
+  /* Orange CI Background Patterns */
+  .bg-primary-pattern {
+    background-image: 
+      radial-gradient(circle at 20% 80%, hsla(24, 100%, 58%, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsla(24, 100%, 58%, 0.1) 0%, transparent 50%);
+  }
+
+  /* Orange CI Hover Effects */
+  .hover-lift {
+    @apply hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/20 transition-all duration-200;
+  }
+
+  /* Orange CI Animation Classes */
+  .pulse-primary {
+    animation: pulse-primary 2s infinite;
+  }
+
+  /* Orange CI Notification Styles */
+  .notification-primary {
+    @apply bg-primary/10 border-primary/30 text-primary/90 border-l-4 border-l-primary;
+  }
+
+  /* Orange CI Table Enhancements */
+  .table-primary thead {
+    @apply bg-primary/5 text-primary/90;
+  }
+
+  .table-primary tbody tr:hover {
+    @apply bg-primary/5;
+  }
+
+  /* Orange CI Code Blocks */
+  .code-primary {
+    @apply bg-primary/10 text-primary/90 border border-primary/20 rounded-md px-2 py-1 font-mono text-sm;
+  }
+
+  /* Navigation Styles */
+  .nav-item-active {
+    @apply bg-primary/10 text-primary border-r-2 border-primary;
+  }
+
+  .nav-item-hover {
+    @apply hover:bg-primary/5 hover:text-primary/80 transition-colors duration-150;
+  }
+}
+
+/* Orange CI Animations */
+@keyframes pulse-primary {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .focus-primary:focus-visible {
+    @apply ring-4 ring-primary;
+  }
+
+  .btn-primary-gradient {
+    @apply bg-primary hover:bg-primary/90;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .hover-lift,
+  .card-interactive,
+  .nav-item-hover {
+    @apply transition-none;
+  }
+  
+  .pulse-primary {
+    animation: none;
+  }
+}

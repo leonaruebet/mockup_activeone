@@ -1,0 +1,334 @@
+/**
+ * Design System Typography and Spacing Utilities
+ * 
+ * This file provides comprehensive design system tokens for typography, spacing,
+ * colors, and component utilities to ensure consistency across the entire web
+ * application. It serves as the single source of truth for design elements.
+ */
+
+/* ===== FONT FAMILY SETUP ===== */
+
+/* Font Family - Plus Jakarta Sans as Primary */
+.font-plus-jakarta-sans {
+  font-family: var(--font-kanit), 'Kanit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Thai Font Support - Kanit Font (Design System Compliant) */
+.font-thai {
+  font-family: var(--font-kanit), var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: "liga" on, "calt" on;
+  font-feature-settings: "liga" on, "calt" on;
+}
+
+/* Kanit Font Class for Thai Locale */
+.font-kanit {
+  font-family: var(--font-kanit), 'Kanit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: "liga" on, "calt" on;
+  font-feature-settings: "liga" on, "calt" on;
+}
+
+.font-inter {
+  font-family: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Locale-specific line heights */
+[lang="th"] {
+  line-height: 1.6;
+}
+
+[lang="en"] {
+  line-height: 1.5;
+}
+
+/* ===== TYPOGRAPHY SCALE - DESIGN SYSTEM TOKENS ===== */
+
+/* Heading Typography */
+.text-heading-xl {
+  font-size: 2.25rem; /* 36px */
+  line-height: 2.75rem; /* 44px */
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  @apply text-noble-black-500 dark:text-white;
+}
+
+.text-heading-l {
+  font-size: 2rem; /* 32px */
+  line-height: 2.5rem; /* 40px */
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  @apply text-noble-black-500 dark:text-white;
+}
+
+.text-heading-m {
+  font-size: 1.75rem; /* 28px */
+  line-height: 2.25rem; /* 36px */
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  @apply text-noble-black-500 dark:text-white;
+}
+
+.text-heading-s {
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem; /* 32px */
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  @apply text-noble-black-500 dark:text-white;
+}
+
+.text-heading-xs {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.75rem; /* 28px */
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  @apply text-noble-black-500 dark:text-white;
+}
+
+/* Body Typography */
+.text-body-xl {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+  font-weight: 400;
+  letter-spacing: 0;
+  @apply text-noble-black-500 dark:text-white;
+}
+
+.text-body-l {
+  font-size: 1rem; /* 16px */
+  line-height: 1.5rem; /* 24px */
+  font-weight: 400;
+  letter-spacing: 0;
+  @apply text-noble-black-500 dark:text-white;
+}
+
+.text-body-m {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.25rem; /* 20px */
+  font-weight: 400;
+  letter-spacing: 0;
+  @apply text-noble-black-400 dark:text-gray-300;
+}
+
+.text-body-s {
+  font-size: 0.75rem; /* 12px */
+  line-height: 1.125rem; /* 18px */
+  font-weight: 400;
+  letter-spacing: 0;
+  @apply text-noble-black-400 dark:text-gray-300;
+}
+
+/* Font Weight Variants */
+.font-light { font-weight: 300; }
+.font-regular { font-weight: 400; }
+.font-medium { font-weight: 500; }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+
+/* ===== COLOR UTILITIES - DESIGN SYSTEM ===== */
+
+/* Text Colors - Based on Design System */
+.text-darkslategray { color: #2F4F4F; }
+.text-dimgray { color: #696969; }
+.text-gray-primary { color: #374151; }
+.text-gray-secondary { color: #6B7280; }
+.text-gray-tertiary { color: #9CA3AF; }
+
+/* ===== SPACING UTILITIES - DESIGN SYSTEM TOKENS ===== */
+
+/* Spacing Scale - Based on Design System Tokens */
+.space-xs { gap: 0.25rem; } /* 4px */
+.space-s { gap: 0.5rem; }   /* 8px */
+.space-m { gap: 0.75rem; }  /* 12px */
+.space-l { gap: 1rem; }     /* 16px */
+.space-xl { gap: 1.5rem; }  /* 24px */
+.space-2xl { gap: 2rem; }   /* 32px */
+.space-3xl { gap: 3rem; }   /* 48px */
+
+/* Margin Utilities */
+.m-xs { margin: 0.25rem; }    /* 4px */
+.m-s { margin: 0.5rem; }      /* 8px */
+.m-m { margin: 0.75rem; }     /* 12px */
+.m-l { margin: 1rem; }        /* 16px */
+.m-xl { margin: 1.5rem; }     /* 24px */
+.m-2xl { margin: 2rem; }      /* 32px */
+.m-3xl { margin: 3rem; }      /* 48px */
+
+/* Padding Utilities */
+.p-xs { padding: 0.25rem; }   /* 4px */
+.p-s { padding: 0.5rem; }     /* 8px */
+.p-m { padding: 0.75rem; }    /* 12px */
+.p-l { padding: 1rem; }       /* 16px */
+.p-xl { padding: 1.5rem; }    /* 24px */
+.p-2xl { padding: 2rem; }     /* 32px */
+.p-3xl { padding: 3rem; }     /* 48px */
+
+/* Responsive Padding Utilities */
+.px-responsive { @apply px-4 lg:px-6 xl:px-8; }
+.py-responsive { @apply py-4 lg:py-6 xl:py-8; }
+
+/* ===== SEMANTIC COMPONENT CLASSES ===== */
+
+/* Sidebar Specific Styles - Locale Aware */
+.sidebar-nav-item {
+  @apply text-body-m font-medium text-darkslategray;
+  @apply p-m rounded-lg hover:bg-gray-50 transition-colors;
+  font-family: var(--font-current, var(--font-plus-jakarta), 'Plus Jakarta Sans', sans-serif);
+}
+
+.sidebar-section-title {
+  @apply text-body-m font-medium text-dimgray;
+  font-family: var(--font-current, var(--font-plus-jakarta), 'Plus Jakarta Sans', sans-serif);
+}
+
+.sidebar-metric-label {
+  @apply text-body-s text-dimgray;
+  font-family: var(--font-current, var(--font-plus-jakarta), 'Plus Jakarta Sans', sans-serif);
+}
+
+.sidebar-metric-value {
+  @apply text-heading-s font-medium text-darkslategray;
+  font-family: var(--font-current, var(--font-plus-jakarta), 'Plus Jakarta Sans', sans-serif);
+}
+
+/* Main Content Styles - Locale Aware */
+.page-heading {
+  @apply text-heading-m font-bold text-darkslategray;
+  font-family: var(--font-current, var(--font-plus-jakarta), 'Plus Jakarta Sans', sans-serif);
+}
+
+.section-heading {
+  @apply text-heading-xs font-semibold text-darkslategray;
+  font-family: var(--font-current, var(--font-plus-jakarta), 'Plus Jakarta Sans', sans-serif);
+}
+
+.card-title {
+  @apply text-body-m font-medium text-darkslategray;
+  font-family: var(--font-current, var(--font-plus-jakarta), 'Plus Jakarta Sans', sans-serif);
+}
+
+.card-subtitle {
+  @apply text-body-s text-dimgray;
+  font-family: var(--font-current, var(--font-plus-jakarta), 'Plus Jakarta Sans', sans-serif);
+}
+
+.metric-value {
+  @apply text-heading-m font-bold;
+  font-family: var(--font-current, var(--font-plus-jakarta), 'Plus Jakarta Sans', sans-serif);
+}
+
+.metric-label {
+  @apply text-body-m text-dimgray font-plus-jakarta-sans;
+}
+
+/* Navigation Specific Styles */
+.nav-item {
+  @apply text-body-m font-medium text-darkslategray font-plus-jakarta-sans;
+  @apply transition-colors hover:text-primary;
+}
+
+.nav-item-active {
+  @apply text-primary font-semibold;
+}
+
+/* Form Styles */
+.form-label {
+  @apply text-body-m font-medium text-darkslategray font-plus-jakarta-sans;
+}
+
+.form-input {
+  @apply text-body-m font-plus-jakarta-sans;
+}
+
+.form-help-text {
+  @apply text-body-s text-dimgray font-plus-jakarta-sans;
+}
+
+/* Button Styles */
+.btn-text {
+  @apply text-body-m font-medium font-plus-jakarta-sans;
+}
+
+/* ===== LAYOUT UTILITIES ===== */
+
+/* Stack Layouts */
+.stack-xs { @apply space-y-1; }    /* 4px vertical spacing */
+.stack-s { @apply space-y-2; }     /* 8px vertical spacing */
+.stack-m { @apply space-y-3; }     /* 12px vertical spacing */
+.stack-l { @apply space-y-4; }     /* 16px vertical spacing */
+.stack-xl { @apply space-y-6; }    /* 24px vertical spacing */
+.stack-2xl { @apply space-y-8; }   /* 32px vertical spacing */
+.stack-3xl { @apply space-y-12; }  /* 48px vertical spacing */
+
+/* Flex Layouts */
+.flex-center { @apply flex items-center justify-center; }
+.flex-between { @apply flex items-center justify-between; }
+.flex-start { @apply flex items-center justify-start; }
+.flex-end { @apply flex items-center justify-end; }
+
+/* Grid Layouts */
+.grid-responsive { @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4; }
+.grid-responsive-2 { @apply grid grid-cols-1 lg:grid-cols-2; }
+.grid-responsive-3 { @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3; }
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .text-heading-xl { font-size: 2rem; line-height: 2.5rem; }
+  .text-heading-l { font-size: 1.75rem; line-height: 2.25rem; }
+  .text-heading-m { font-size: 1.5rem; line-height: 2rem; }
+  .text-heading-s { font-size: 1.25rem; line-height: 1.75rem; }
+  .text-heading-xs { font-size: 1.125rem; line-height: 1.5rem; }
+}
+
+/* ===== INTERACTION STATES ===== */
+
+/* Ensure smooth transitions for interactive elements */
+.design-system-interactive {
+  @apply transition-colors duration-200 ease-in-out;
+}
+
+/* Focus States */
+.focus-design-system {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+}
+
+/* Hover States */
+.hover-design-system {
+  @apply hover:bg-gray-50 transition-colors duration-200;
+}
+
+/* ===== ACCESSIBILITY ===== */
+
+/* Screen Reader Only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* High Contrast Support */
+@media (prefers-contrast: high) {
+  .text-dimgray { color: #333; }
+  .text-darkslategray { color: #000; }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .design-system-interactive,
+  .hover-design-system {
+    transition: none;
+  }
+}
+
+/* Log design system usage */
+@supports (color: color(display-p3 1 0 0)) {
+  /* Modern browser - design system fully loaded */
+} 
